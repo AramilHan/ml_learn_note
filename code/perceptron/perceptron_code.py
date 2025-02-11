@@ -63,9 +63,9 @@ def perceptron_scikit_learn_demo():
 def perceptron_tensorflow_demo():
     import numpy as np
     import tensorflow as tf
-    from tensorflow.keras.models import Sequential
-    from tensorflow.keras.layers import Dense, Input
-    from tensorflow.keras.optimizers import SGD
+    from tensorflow.python.keras.models import Sequential
+    from tensorflow.python.keras.layers import Dense, Input
+    from tensorflow.python.keras.optimizer_v1 import SGD
     x_train = np.array([[3, 3], [4, 3], [1, 1]])
     y_train = np.array([1, 1, -1])
     y_train = (y_train + 1) / 2
