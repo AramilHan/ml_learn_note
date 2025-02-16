@@ -20,7 +20,7 @@ def cos4vector(v1, v2):
     return np.dot(v1, v2)/ (np.linalg.norm(v1) * np.linalg.norm(v2))
 
 # 两个集合间的cos相似度
-def cos2set(set1, set2):
+def cos4set(set1, set2):
     return len(set1 & set2) / (len(set1) * len(set2)) ** 0.5
 
 # 两个向量间的pearson相似度
@@ -44,7 +44,7 @@ def main():
     print(CN(a, b))
     print(Jaccard(a, b))
     print(cos4vector(c, d))
-    print(cos2set(a, b))
+    print(cos4set(a, b))
     print(pearson(c, d))
     print(pearsonSimple(c, d))
 
