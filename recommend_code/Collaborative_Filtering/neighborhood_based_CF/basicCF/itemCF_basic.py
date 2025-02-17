@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.path.abspath('../../../'))
 sys.path.append(os.path.abspath('../'))
 from Collaborative_Filtering import dataloader
-from userCF import userCF_basic as userCF
+from basicCF import userCF_basic as userCF
 from data_set import filepaths as fp
 from tqdm import tqdm
 from Collaborative_Filtering.basic_similarity_metric import basic_sim as b_sim
