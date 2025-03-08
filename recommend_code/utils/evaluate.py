@@ -5,6 +5,9 @@
 @File    : evaluate.py
 @Description : 
 """
+import numpy as np
+
+
 def precision4Set(test_pos_set, test_neg_set, pred_set):
     """
     :param test_pos_set: 真实的用户喜爱的物品集合{iid1, iid2, iid3}
@@ -26,3 +29,12 @@ def recall4Set(test_set, pred_set):
     """
     # 计算它们的交集数量 除以 测试集的数量
     return len(pred_set & test_set) / len(test_set)
+
+def MSE(y_true, y_pred):
+    return np.average((np.array(y_true) - np.array(y_pred)) ** 2)
+
+def RMSE(y_true, y_pred):
+    return MSE(y_true, y_pred) ** 0.5
+
+def MAE(y_true, y_pred):
+    return np.average(abs(np.array(y_true) - np.array(y_pred)))
